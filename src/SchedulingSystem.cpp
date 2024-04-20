@@ -236,6 +236,28 @@ bool SchedulingSystem::allProcessesDone() const
   return true;
 }
 
+/**
+ * @brief Dispatches a process to the CPU if it is currently idle.
+ *
+ * This function first checks if the cpu is idle. If so, the next process
+ * is dispatched and the cpu is set to the pid of the next process. If the
+ * process hasn't been started, its start time will be set to the current
+ * system time.
+ *
+ */
+void SchedulingSystem::dispatchCpuIfIdle()
+{
+  if (isCpuIdle())
+  {
+    Pid nextPid = policy->dispatch();
+    cpu = nextPid;
+    if (process[cpu].startTime == NOT_STARTED)
+    {
+      process[cpu].startTime = getSystemTime();
+    }
+  }
+}
+
 /** @brief final results table
  *
  * Calculate the final results and format as a table.

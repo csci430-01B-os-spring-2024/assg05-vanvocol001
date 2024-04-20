@@ -159,7 +159,7 @@ TEST_CASE("Task 2: Implement allProcessesDone() member method", "[task2]")
 /**
  * @brief Task 3: Implement dispatchCpuIfIdle() member method
  */
-#undef task3
+#define task3
 #ifdef task3
 TEST_CASE("Task 3: Implement dispatchCpuIfIdle() member method", "[task3]")
 {
