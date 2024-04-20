@@ -46,7 +46,7 @@ TEST_CASE("Setup 1: Initial tests of loading and constructing process table", "[
 /**
  * @brief Task 1: Implement basic SchedulingSystem accessor methods
  */
-#undef task1_1
+#define task1_1
 #ifdef task1_1
 TEST_CASE("Task 1: implement getSystemTime() accessor method", "[task1]")
 {
@@ -59,7 +59,7 @@ TEST_CASE("Task 1: implement getSystemTime() accessor method", "[task1]")
 }
 #endif
 
-#undef task1_2
+#define task1_2
 #ifdef task1_2
 TEST_CASE("Task 1: implement getNumProcesses() accessor method", "[task1]")
 {
@@ -92,7 +92,7 @@ TEST_CASE("Task 1: implement getNumProcesses() accessor method", "[task1]")
 }
 #endif
 
-#undef task1_3
+#define task1_3
 #ifdef task1_3
 TEST_CASE("Task 1: implement isCpuIdle() accessor method", "[task1]")
 {
@@ -105,7 +105,7 @@ TEST_CASE("Task 1: implement isCpuIdle() accessor method", "[task1]")
 }
 #endif
 
-#undef task1_4
+#define task1_4
 #ifdef task1_4
 TEST_CASE("Task 1: implement getRunningProcessName() accessor method", "[task1]")
 {

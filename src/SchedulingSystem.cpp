@@ -158,6 +158,63 @@ Process* SchedulingSystem::getProcessTable() const
   return process;
 }
 
+/**
+ * @brief Returns the current system time
+ *
+ * Returns the current system time.
+ *
+ * @return An integer value representing the current system time.
+ */
+int SchedulingSystem::getSystemTime() const
+{
+  return this->systemTime;
+}
+
+/**
+ * @brief Returns the number of processes in the system.
+ *
+ * This function returns the total number of processes within the system.
+ *
+ * @return integer value representing the number of processes in the system.
+ */
+int SchedulingSystem::getNumProcesses() const
+{
+  return this->numProcesses;
+}
+
+/**
+ * @brief Checks if the CPU is currently idle.
+ *
+ * This function checks if the CPU is currently idle by comparing the CPU
+ * id with the constant IDLE.
+ *
+ * @return True if the CPU is idle, false otherwise.
+ */
+bool SchedulingSystem::isCpuIdle()
+{
+  return (cpu == IDLE);
+}
+
+/**
+ * @brief Gets the name of the currently running process.
+ *
+ * If the CPU is in an idle state, the function returns the string "IDLE". Otherwise,
+ * it gets and returns the name of the process currently running on the CPU.
+ *
+ * @return A string representing the name of the running process or "IDLE" if the CPU is idle.
+ */
+string SchedulingSystem::getRunningProcessName() const
+{
+  if (cpu == IDLE)
+  {
+    return "IDLE";
+  }
+  else
+  {
+    return process[cpu].name;
+  }
+}
+
 /** @brief final results table
  *
  * Calculate the final results and format as a table.
