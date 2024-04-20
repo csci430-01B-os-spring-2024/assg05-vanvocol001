@@ -121,7 +121,7 @@ TEST_CASE("Task 1: implement getRunningProcessName() accessor method", "[task1]"
 /**
  * @brief Task 2: Implement allProcessesDone() member method
  */
-#undef task2
+#define task2
 #ifdef task2
 TEST_CASE("Task 2: Implement allProcessesDone() member method", "[task2]")
 {

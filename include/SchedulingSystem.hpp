@@ -174,6 +174,7 @@ public:
   int getNumProcesses() const;
   bool isCpuIdle();
   string getRunningProcessName() const;
+  bool allProcessesDone() const;
 
   // methods for running paging system simulation
   void checkProcessArrivals();
