@@ -170,6 +170,14 @@ public:
   void generateRandomProcessTable(int numProcesses, double arrivalProbability, int maxServiceTime = 6, int seed = SEED_TIME);
   string processTableToString() const;
 
+  int getSystemTime() const;
+  int getNumProcesses() const;
+  bool isCpuIdle();
+  string getRunningProcessName() const;
+  bool allProcessesDone() const;
+  void dispatchCpuIfIdle();
+  void checkProcessFinished();
+
   // methods for running paging system simulation
   void checkProcessArrivals();
   bool didProcessArrive() const;

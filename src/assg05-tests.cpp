@@ -46,7 +46,7 @@ TEST_CASE("Setup 1: Initial tests of loading and constructing process table", "[
 /**
  * @brief Task 1: Implement basic SchedulingSystem accessor methods
  */
-#undef task1_1
+#define task1_1
 #ifdef task1_1
 TEST_CASE("Task 1: implement getSystemTime() accessor method", "[task1]")
 {
@@ -59,7 +59,7 @@ TEST_CASE("Task 1: implement getSystemTime() accessor method", "[task1]")
 }
 #endif
 
-#undef task1_2
+#define task1_2
 #ifdef task1_2
 TEST_CASE("Task 1: implement getNumProcesses() accessor method", "[task1]")
 {
@@ -92,7 +92,7 @@ TEST_CASE("Task 1: implement getNumProcesses() accessor method", "[task1]")
 }
 #endif
 
-#undef task1_3
+#define task1_3
 #ifdef task1_3
 TEST_CASE("Task 1: implement isCpuIdle() accessor method", "[task1]")
 {
@@ -105,7 +105,7 @@ TEST_CASE("Task 1: implement isCpuIdle() accessor method", "[task1]")
 }
 #endif
 
-#undef task1_4
+#define task1_4
 #ifdef task1_4
 TEST_CASE("Task 1: implement getRunningProcessName() accessor method", "[task1]")
 {
@@ -121,7 +121,7 @@ TEST_CASE("Task 1: implement getRunningProcessName() accessor method", "[task1]"
 /**
  * @brief Task 2: Implement allProcessesDone() member method
  */
-#undef task2
+#define task2
 #ifdef task2
 TEST_CASE("Task 2: Implement allProcessesDone() member method", "[task2]")
 {
@@ -159,7 +159,7 @@ TEST_CASE("Task 2: Implement allProcessesDone() member method", "[task2]")
 /**
  * @brief Task 3: Implement dispatchCpuIfIdle() member method
  */
-#undef task3
+#define task3
 #ifdef task3
 TEST_CASE("Task 3: Implement dispatchCpuIfIdle() member method", "[task3]")
 {
@@ -281,7 +281,7 @@ TEST_CASE("Task 3: Implement dispatchCpuIfIdle() member method", "[task3]")
 /**
  * @brief Task 4: Implement checkProcessFinished() member method
  */
-#undef task4
+#define task4
 #ifdef task4
 /**
  * @brief Task 4: Test detecting process finished.  With this method,
@@ -389,7 +389,7 @@ TEST_CASE("Task 4: Implement checkProcessFinished() member method, final test", 
 /**
  * @brief Task 5: Test full runSimulation() using FCFS.
  */
-#undef task5
+#define task5
 #ifdef task5
 /**
  */
