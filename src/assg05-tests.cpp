@@ -389,7 +389,7 @@ TEST_CASE("Task 4: Implement checkProcessFinished() member method, final test", 
 /**
  * @brief Task 5: Test full runSimulation() using FCFS.
  */
-#undef task5
+#define task5
 #ifdef task5
 /**
  */
