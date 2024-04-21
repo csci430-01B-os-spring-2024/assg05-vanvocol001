@@ -258,6 +258,33 @@ void SchedulingSystem::dispatchCpuIfIdle()
   }
 }
 
+/**
+ * @brief Checks if the current process has completed.
+ *
+ * The function will return if the cpu is currently idle or the
+ * current process is still running (serviceTime > usedTime). Otherwise,
+ * The process will be set to done, its endTime will be seet to the
+ * current system time, and the cpu will be returnd to idle.
+ *
+ */
+void SchedulingSystem::checkProcessFinished()
+{
+  if (isCpuIdle())
+  {
+    return;
+  }
+  if ((process[cpu].serviceTime > process[cpu].usedTime))
+  {
+    return;
+  }
+  else
+  {
+    process[cpu].endTime = getSystemTime();
+    process[cpu].done = true;
+    cpu = IDLE;
+  }
+}
+
 /** @brief final results table
  *
  * Calculate the final results and format as a table.

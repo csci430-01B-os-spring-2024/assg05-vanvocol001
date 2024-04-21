@@ -176,6 +176,7 @@ public:
   string getRunningProcessName() const;
   bool allProcessesDone() const;
   void dispatchCpuIfIdle();
+  void checkProcessFinished();
 
   // methods for running paging system simulation
   void checkProcessArrivals();

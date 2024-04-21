@@ -281,7 +281,7 @@ TEST_CASE("Task 3: Implement dispatchCpuIfIdle() member method", "[task3]")
 /**
  * @brief Task 4: Implement checkProcessFinished() member method
  */
-#undef task4
+#define task4
 #ifdef task4
 /**
  * @brief Task 4: Test detecting process finished.  With this method,
